@@ -29,32 +29,30 @@
             <input type="number" id="input" class="form-control" placeholder="input">
         </div>
         <div class="col">
-            <output type="number" id="output" class="form-control" placeholder="output">
+            <input type="number" id="output" class="form-control" placeholder="output">
         </div>
     </div>
 
     <div class="form-row">
     <div class="col-md-6">  
-        <select class="custom-select" id="options">
-        <option selected>Open this select menu</option>
-        <option class="alert alert-danger" value="fehrenheit">Fahrenheit</option>
-        <option class="alert alert-warning" value="celsius">Celsius</option>
-        <option class="alert alert-info" value="kelvin">Kelvin</option>
+        <select class="custom-select" id="options1">
+        <option value="f">Fahrenheit</option>
+        <option value="c">Celsius</option>
         </select>
     </div>
 
     <div class="col-md-6">  
-        <select class="custom-select" id="options">
-        <option selected>Open this select menu</option>
-        <option class="alert alert-danger" value="fehrenheit">Fahrenheit</option>
-        <option class="alert alert-warning" value="celsius">Celsius</option>
-        <option class="alert alert-info" value="kelvin">Kelvin</option>
+        <select class="custom-select" id="options2">
+        <option value="f">Fahrenheit</option>
+        <option value="c">Celsius</option>
         </select>
     </div>
     </div>
 </div>
 </form>
-    <button type="button" class="btn btn-outline-success">Submit</button>
+    <div class="col-md-12 text-center"> 
+    <button type="button" onclick="convert()" class="btn-outline-success btn-primary">Convert</button>
+    </div>
 </div>
 </div>
     

@@ -1,8 +1,4 @@
 const button = document.querySelectorAll('.btn')
-const input = document.getElementById('input')
-const output = document.getElementById('output')
-const options = document.getElementById('options')
-const option = options.options[options.selectedIndex].value
 
 function openTab(evt, type) {
     var i, tabcontent, tablinks;
@@ -18,3 +14,16 @@ function openTab(evt, type) {
     evt.currentTarget.className += " active";
 }
 
+function convert(){
+    const num = Number(document.getElementById('input').value)
+    const option1 = document.getElementById('options1').value
+    const option2 = document.getElementById('options2').value
+    const output = document.getElementById('output')
+    if (option1 === option2) {
+        output.value = num
+    } else if (option1 === 'c' && option2 === 'f') {
+        output.value = Math.round(num * 9 / 5 + 32);
+    } else if (option1 === 'f' && option2 === 'c') {
+        output.value = Math.round((num -32) * 5 / 9);
+    }
+}
