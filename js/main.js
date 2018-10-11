@@ -22,20 +22,13 @@ function createTable(history){
     for(const row of history){
         let inputCombined = `${row.inputType} : ${row.inputValue}`
         let outputCombined = `${row.outputType} : ${row.outputValue}`
-        const tr = document.createElement("tr");
-        const typeCell = document.createElement("td");
-        const inputCell = document.createElement("td");
-        const outputCell = document.createElement("td");
-        const type = document.createTextNode(row.type);
-        const input1 = document.createTextNode(inputCombined);
-        const output1 =document.createTextNode(outputCombined);
-        rows.appendChild(tr);
-        typeCell.appendChild(type);
-        inputCell.appendChild(input1);
-        outputCell.appendChild(output1);
-        tr.appendChild(typeCell);
-        tr.appendChild(inputCell);
-        tr.appendChild(outputCell);
+        const rowz = rows.insertRow(0);
+        const cell1 = rowz.insertCell(0);
+        const cell2 = rowz.insertCell(1);
+        const cell3 = rowz.insertCell(2);
+        cell1.innerHTML = row.type;
+        cell2.innerHTML = inputCombined;
+        cell3.innerHTML = outputCombined;
         }
 }   
 
