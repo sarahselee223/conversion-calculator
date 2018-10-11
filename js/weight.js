@@ -24,27 +24,36 @@ function weightConvert(){
     const a = document.getElementById('wOptions1').value
     const b = document.getElementById('wOptions2').value
     const output = document.getElementById('wOutput')
-
-    localStorage.setItem('inputItem', JSON.stringify({ 1: a, 2: num })); 
-    const inputItem = JSON.parse(localStorage.getItem('inputItem'));  
     const type = "Weight";
-
+    const history = JSON.parse(localStorage.getItem('history') || "[]") 
 
     if (a === b) {
-    output.value = num
+        output.value = num
+       
+        history.push({
+            outputType : b,
+            outputValue : num,
+            inputType : a,
+            inputValue : num,
+            type
+        })
+        localStorage.setItem('history', JSON.stringify(history)); 
 
-    localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
-    const outputItem = JSON.parse(localStorage.getItem('outputItem'))
-    
-    createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
+        createTable(history)
 
     } else {
-    output.value = weightTable[a][b](num).toFixed(5)
-
-    localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
-    const outputItem = JSON.parse(localStorage.getItem('outputItem'))
-    
-    createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
+        output.value = weightTable[a][b](num).toFixed(1)
+        
+        history.push({
+            outputType : b,
+            outputValue : output.value,
+            inputType : a,
+            inputValue : num,
+            type
+        })
+        localStorage.setItem('history', JSON.stringify(history)); 
+        
+        createTable(history)
 
     } return output
 }
