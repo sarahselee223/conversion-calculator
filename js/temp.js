@@ -13,7 +13,7 @@ function tempConvert(){
     const a = document.getElementById('options1').value
     const b = document.getElementById('options2').value
     const output = document.getElementById('output')
-
+    const type = "Temperature";
 
     localStorage.setItem('inputItem', JSON.stringify({ 1: a, 2: num })); 
     const inputItem = JSON.parse(localStorage.getItem('inputItem'));  
@@ -24,50 +24,20 @@ function tempConvert(){
         localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
         const outputItem = JSON.parse(localStorage.getItem('outputItem'))
         
-        let inputCombined = `${inputItem[1]} : ${inputItem[2]}`
-        let outputCombined = `${outputItem[1]} : ${outputItem[2]}`
-        const rows = document.querySelector('tbody');    
-        var tr = document.createElement("tr");
-        var typeCell = document.createElement("td");
-        var inputCell = document.createElement("td");
-        var outputCell = document.createElement("td");
-        var type = document.createTextNode("Temperature");
-        var input1 = document.createTextNode(inputCombined);
-        var output1 =document.createTextNode(outputCombined);
-        rows.appendChild(tr);
-        typeCell.appendChild(type);
-        inputCell.appendChild(input1);
-        outputCell.appendChild(output1);
-        tr.appendChild(typeCell);
-        tr.appendChild(inputCell);
-        tr.appendChild(outputCell);
-
+        createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
 
     } else {
         output.value = tempTable[a][b](num).toFixed(1)
         
         localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
         const outputItem = JSON.parse(localStorage.getItem('outputItem'))
+ 
+        createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
         
-        let inputCombined = `${inputItem[1]} : ${inputItem[2]}`
-        let outputCombined = `${outputItem[1]} : ${outputItem[2]}`
-        const rows = document.querySelector('tbody');    
-        var tr = document.createElement("tr");
-        var typeCell = document.createElement("td");
-        var inputCell = document.createElement("td");
-        var outputCell = document.createElement("td");
-        var type = document.createTextNode("Temperature");
-        var input1 = document.createTextNode(inputCombined);
-        var output1 =document.createTextNode(outputCombined);
-        rows.appendChild(tr);
-        typeCell.appendChild(type);
-        inputCell.appendChild(input1);
-        outputCell.appendChild(output1);
-        tr.appendChild(typeCell);
-        tr.appendChild(inputCell);
-        tr.appendChild(outputCell);
 
     } return output
+
+    
 } 
 
 

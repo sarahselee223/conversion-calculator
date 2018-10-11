@@ -27,32 +27,16 @@ function weightConvert(){
 
     localStorage.setItem('inputItem', JSON.stringify({ 1: a, 2: num })); 
     const inputItem = JSON.parse(localStorage.getItem('inputItem'));  
+    const type = "Weight";
 
 
     if (a === b) {
     output.value = num
 
-    localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: num })); 
+    localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
     const outputItem = JSON.parse(localStorage.getItem('outputItem'))
     
-    let inputCombined = `${inputItem[1]} : ${inputItem[2]}`
-    let outputCombined = `${outputItem[1]} : ${outputItem[2]}`
-    const rows = document.querySelector('tbody');    
-    var tr = document.createElement("tr");
-    var typeCell = document.createElement("td");
-    var inputCell = document.createElement("td");
-    var outputCell = document.createElement("td");
-    var type = document.createTextNode("Weight");
-    var input1 = document.createTextNode(inputCombined);
-    var output1 =document.createTextNode(outputCombined);
-    rows.appendChild(tr);
-    typeCell.appendChild(type);
-    inputCell.appendChild(input1);
-    outputCell.appendChild(output1);
-    tr.appendChild(typeCell);
-    tr.appendChild(inputCell);
-    tr.appendChild(outputCell);
-
+    createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
 
     } else {
     output.value = weightTable[a][b](num).toFixed(5)
@@ -60,23 +44,7 @@ function weightConvert(){
     localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
     const outputItem = JSON.parse(localStorage.getItem('outputItem'))
     
-    let inputCombined = `${inputItem[1]} : ${inputItem[2]}`
-    let outputCombined = `${outputItem[1]} : ${outputItem[2]}`
-    const rows = document.querySelector('tbody');    
-    var tr = document.createElement("tr");
-    var typeCell = document.createElement("td");
-    var inputCell = document.createElement("td");
-    var outputCell = document.createElement("td");
-    var type = document.createTextNode("Weight");
-    var input1 = document.createTextNode(inputCombined);
-    var output1 =document.createTextNode(outputCombined);
-    rows.appendChild(tr);
-    typeCell.appendChild(type);
-    inputCell.appendChild(input1);
-    outputCell.appendChild(output1);
-    tr.appendChild(typeCell);
-    tr.appendChild(inputCell);
-    tr.appendChild(outputCell);
+    createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
 
     } return output
 }
