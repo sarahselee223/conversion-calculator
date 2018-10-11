@@ -45,8 +45,6 @@ function lengthConvert(){
     const output = document.getElementById('lOutput')
     const type = "Length";
     const history = JSON.parse(localStorage.getItem('history') || "[]") 
-    // localStorage.setItem('inputItem', JSON.stringify({ 1: a, 2: num })); 
-    // const inputItem = JSON.parse(localStorage.getItem('inputItem'));  
 
     if (a === b) {
         output.value = num

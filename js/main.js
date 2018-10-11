@@ -1,7 +1,6 @@
 
 const savedData = JSON.parse(localStorage.getItem('inputItem'));  
 
-
 function openTab(evt, type) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -16,15 +15,6 @@ function openTab(evt, type) {
     evt.currentTarget.className += " active";
 }
 
-function clearRecord(){ 
-    const trs = document.querySelector('tr');
-    if(typeof trs !== undefined){
-        trs.parentNode.removeChild(trs);
-    }
-}
-
-
-// function createTable (val1, val2, val3, val4, type1) {
 function createTable(history){
     const rows = document.querySelector('tbody');    
     rows.innerHTML = ''
@@ -48,3 +38,10 @@ function createTable(history){
         tr.appendChild(outputCell);
         }
 }   
+
+function clearRecord(){ 
+    const old_tbody = document.querySelector('tbody');
+    var new_tbody = document.createElement('tbody');
+    old_tbody.parentNode.replaceChild(new_tbody, old_tbody)
+    localStorage.clear();
+}

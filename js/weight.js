@@ -18,7 +18,6 @@ const weightTable = {
     },
 }
 
-
 function weightConvert(){
     const num = Number(document.getElementById('wInput').value)
     const a = document.getElementById('wOptions1').value
