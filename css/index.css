@@ -17,7 +17,7 @@
 }
 .box2{
     display: flex;
-    margin: 2%;
+    margin: 1.5%;
     justify-content: center; 
     flex-direction: column;
     padding: 15px;
@@ -30,6 +30,8 @@
 }
 .tab button {
     background-color: inherit;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     float: left;
     border: none;
     outline: none;
@@ -76,5 +78,15 @@
     margin:1.5%;
 }
 .text-center{
-    margin: 1.5%
+    margin: 1.5%;
+    font-family: 'Raleway', sans-serif;
+}
+.display-5{
+    display: flex; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin:1.5%;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
 }
