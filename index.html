@@ -32,7 +32,7 @@
                 <input type="number" id="input" class="form-control" placeholder="input" required>
             </div>
             <div class="col">
-                <input type="number" id="output" class="form-control" placeholder="output">
+                <input type="number" id="output" class="form-control" placeholder="output" readonly>
             </div>
         </div>
 
@@ -56,8 +56,7 @@
     </div>
     </form>
         <div class="col-md-12 text-center"> 
-        <button type="button" onclick="tempConvert()" class="btn-outline-success btn-primary">Convert</button>
-        <button type="button" onclick="checkTemp()" class="btn-outline-warning btn-primary">Check Current Temperature</button>
+        <button type="button" onclick="tempConvert()" class="btn btn-primary btn-lg active">Convert</button>
         </div>
     </div>
 
@@ -69,7 +68,7 @@
                     <input type="number" id="wInput" class="form-control" placeholder="Input" required>
                 </div>
                 <div class="col">
-                    <input type="number" id="wOutput" class="form-control" placeholder="Output">
+                    <input type="number" id="wOutput" class="form-control" placeholder="Output" readonly>
                 </div>
             </div>
     
@@ -95,7 +94,7 @@
         </div>
         </form>
             <div class="col-md-12 text-center"> 
-            <button type="button" onclick="weightConvert()" class="btn-outline-success btn-primary">Convert</button>
+            <button type="button" onclick="weightConvert()" class="btn btn-primary btn-lg active">Convert</button>
             </div>
     </div>
 
@@ -107,7 +106,7 @@
                     <input type="number" id="lInput" class="form-control" placeholder="input" required>
                 </div>
                 <div class="col">
-                    <input type="number" id="lOutput" class="form-control" placeholder="output">
+                    <input type="number" id="lOutput" class="form-control" placeholder="output" readonly>
                 </div>
             </div>
     
@@ -137,25 +136,18 @@
         </div>
         </form>
             <div class="col-md-12 text-center"> 
-            <button type="button" onclick="(lengthConvert())" class="btn-outline-success btn-primary">Convert</button>
+            <button type="button" onclick="(lengthConvert())" class="btn btn-primary btn-lg active">Convert</button>
             </div>
     </div>
 
     <div id="history-box" class="box2 row-12">
-        <div class="text-center display-6">Your Conversion Record</div>
+        <div class="text-center h4 display-5">Your Conversion Record</div>
         <table class="table table-dark text-center">
-            <thead>
-              <tr>
-                <th scope="col">Type</th>
-                <th scope="col">Input</th>
-                <th scope="col">Output</th>
-              </tr>
-            </thead>
             <tbody>
             </tbody>
         </table>
         <div class="col-md-12 text-center"> 
-            <button type="button" onclick="(clearRecord())" class="btn-outline-info btn-primary">Clear Record</button>
+            <button type="button-center" onclick="(clearRecord())" class="btn btn-secondary btn-lg active">Clear Record</button>
         </div>
     </div>       
 </div>

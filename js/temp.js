@@ -21,11 +21,11 @@ function tempConvert(){
     if (a === b) {
         output.value = num
 
-        localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: num })); 
+        localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
         const outputItem = JSON.parse(localStorage.getItem('outputItem'))
         
-        let inputCombined = `${inputItem[1]} - ${inputItem[2]}`
-        let outputCombined = `${outputItem[1]} - ${outputItem[2]}`
+        let inputCombined = `${inputItem[1]} : ${inputItem[2]}`
+        let outputCombined = `${outputItem[1]} : ${outputItem[2]}`
         const rows = document.querySelector('tbody');    
         var tr = document.createElement("tr");
         var typeCell = document.createElement("td");
@@ -49,8 +49,8 @@ function tempConvert(){
         localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
         const outputItem = JSON.parse(localStorage.getItem('outputItem'))
         
-        let inputCombined = `${inputItem[1]} - ${inputItem[2]}`
-        let outputCombined = `${outputItem[1]} - ${outputItem[2]}`
+        let inputCombined = `${inputItem[1]} : ${inputItem[2]}`
+        let outputCombined = `${outputItem[1]} : ${outputItem[2]}`
         const rows = document.querySelector('tbody');    
         var tr = document.createElement("tr");
         var typeCell = document.createElement("td");
@@ -71,6 +71,3 @@ function tempConvert(){
 } 
 
 
-function checkTemp(){
-    location.href = "https://www.google.com/search?q=current+temperature&oq=current+temperature&aqs=chrome.0.69i59j0l5.1141j0j7&sourceid=chrome&ie=UTF-8";
-}

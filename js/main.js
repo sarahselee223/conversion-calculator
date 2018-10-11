@@ -14,7 +14,9 @@ function openTab(evt, type) {
     evt.currentTarget.className += " active";
 }
 
-// funcion clearRecord(){
-//     const rows = document.querySelector('tbody');  
-
-// }
+function clearRecord(){ 
+    const trs = document.querySelector('tr');
+    if(typeof trs !== undefined){
+        trs.parentNode.removeChild(trs);
+    }
+}
