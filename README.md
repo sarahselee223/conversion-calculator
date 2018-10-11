@@ -14,3 +14,4 @@ Unit Converter is a simple tool with 13 categories of essential units that are u
 
 Track your previous records and clear records by clicking Clear Record button.
 
+<img width="854" alt="record_img" src="https://user-images.githubusercontent.com/41387357/46835966-8bc27200-cd64-11e8-88c8-4dc667ae5201.png">
