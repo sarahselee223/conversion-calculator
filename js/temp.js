@@ -13,35 +13,60 @@ function tempConvert(){
     const a = document.getElementById('options1').value
     const b = document.getElementById('options2').value
     const output = document.getElementById('output')
-    const historyBoxFrom = document.getElementById('history-box-from')
-    const historyBoxTo = document.getElementById('history-box-to')
+
 
     localStorage.setItem('inputItem', JSON.stringify({ 1: a, 2: num })); 
-    const inputItem = JSON.parse(localStorage.getItem('inputItem'));
-    inputItem;
-    let addTextFrom1 = document.createTextNode(inputItem[1]);
-    let addTextFrom2 = document.createTextNode(inputItem[2]);
-    historyBoxFrom.appendChild(addTextFrom1)
-    historyBoxFrom.appendChild(addTextFrom2)
+    const inputItem = JSON.parse(localStorage.getItem('inputItem'));  
 
     if (a === b) {
         output.value = num
+
         localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: num })); 
         const outputItem = JSON.parse(localStorage.getItem('outputItem'))
-        outputItem;
-        let addTextTo1 = document.createTextNode(outputItem[1]);
-        let addTextTo2 = document.createTextNode(outputItem[2]);
-        historyBoxTo.appendChild(addTextTo1)
-        historyBoxTo.appendChild(addTextTo2)
+        
+        let inputCombined = `${inputItem[1]} - ${inputItem[2]}`
+        let outputCombined = `${outputItem[1]} - ${outputItem[2]}`
+        const rows = document.querySelector('tbody');    
+        var tr = document.createElement("tr");
+        var typeCell = document.createElement("td");
+        var inputCell = document.createElement("td");
+        var outputCell = document.createElement("td");
+        var type = document.createTextNode("Temperature");
+        var input1 = document.createTextNode(inputCombined);
+        var output1 =document.createTextNode(outputCombined);
+        rows.appendChild(tr);
+        typeCell.appendChild(type);
+        inputCell.appendChild(input1);
+        outputCell.appendChild(output1);
+        tr.appendChild(typeCell);
+        tr.appendChild(inputCell);
+        tr.appendChild(outputCell);
+
+
     } else {
-        output.value = tempTable[a][b](num).toFixed(2)
+        output.value = tempTable[a][b](num).toFixed(1)
+        
         localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
         const outputItem = JSON.parse(localStorage.getItem('outputItem'))
-        outputItem;
-        let addTextTo1 = document.createTextNode(outputItem[1]);
-        let addTextTo2 = document.createTextNode(outputItem[2]);
-        historyBoxTo.appendChild(addTextTo1)
-        historyBoxTo.appendChild(addTextTo2)
+        
+        let inputCombined = `${inputItem[1]} - ${inputItem[2]}`
+        let outputCombined = `${outputItem[1]} - ${outputItem[2]}`
+        const rows = document.querySelector('tbody');    
+        var tr = document.createElement("tr");
+        var typeCell = document.createElement("td");
+        var inputCell = document.createElement("td");
+        var outputCell = document.createElement("td");
+        var type = document.createTextNode("Temperature");
+        var input1 = document.createTextNode(inputCombined);
+        var output1 =document.createTextNode(outputCombined);
+        rows.appendChild(tr);
+        typeCell.appendChild(type);
+        inputCell.appendChild(input1);
+        outputCell.appendChild(output1);
+        tr.appendChild(typeCell);
+        tr.appendChild(inputCell);
+        tr.appendChild(outputCell);
+
     } return output
 } 
 

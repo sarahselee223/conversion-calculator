@@ -1,4 +1,4 @@
-const button = document.querySelectorAll('.btn')
+
 
 function openTab(evt, type) {
     var i, tabcontent, tablinks;
@@ -13,4 +13,5 @@ function openTab(evt, type) {
     document.getElementById(type).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 

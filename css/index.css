@@ -71,5 +71,8 @@
     font-family: 'Raleway', sans-serif;
 }
 .btn-primary{
-    margin:4%;
+    margin:2.5%;
+}
+.text-center{
+    margin-bottom: 1.5%
 }
