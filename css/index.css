@@ -69,13 +69,12 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin:2%;
+    margin:1.5%;
     font-family: 'Raleway', sans-serif;
 }
 .btn-primary{
-    display: flex; 
-    align-items: center;
-    margin:1.5%;
+    text-align: center;
+    margin: 2%;
 }
 .text-center{
     margin: 1.5%;
@@ -88,5 +87,6 @@
     align-items: center;
     margin:1.5%;
     font-size: 25px;
+    padding-left: 1.5em;
     font-family: 'Raleway', sans-serif;
 }
