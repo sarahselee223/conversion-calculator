@@ -1,6 +1,6 @@
 # Unit Converter
 
-Unit Converter is a simple tool with 13 categories of essential units that are used in daily life n the world. 
+Unit Converter is a simple tool converts between 13 essential units that are used in daily life in the world. 
 
 ### Units 
 
@@ -12,6 +12,6 @@ Unit Converter is a simple tool with 13 categories of essential units that are u
 
 ### Tips 
 
-Track your previous records and clear records by clicking Clear Record button.
+This tool tracks your previous conversion records. You can clear the record history by clicking the record button.
 
 <img width="854" alt="record_img" src="https://user-images.githubusercontent.com/41387357/46835966-8bc27200-cd64-11e8-88c8-4dc667ae5201.png">
