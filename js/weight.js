@@ -28,32 +28,19 @@ function weightConvert(){
 
     if (a === b) {
         output.value = num
-       
-        history.push({
-            outputType : b,
-            outputValue : num,
-            inputType : a,
-            inputValue : num,
-            type
-        })
-        localStorage.setItem('history', JSON.stringify(history)); 
-
-        createTable(history)
-
     } else {
         output.value = weightTable[a][b](num).toFixed(1)
-        
-        history.push({
-            outputType : b,
-            outputValue : output.value,
-            inputType : a,
-            inputValue : num,
-            type
-        })
-        localStorage.setItem('history', JSON.stringify(history)); 
-        
-        createTable(history)
+    } 
 
-    } return output
+    history.push({
+        outputType : b,
+        outputValue : output.value,
+        inputType : a,
+        inputValue : num,
+        type
+    })
+    localStorage.setItem('history', JSON.stringify(history)); 
+    
+    createTable()
 }
 

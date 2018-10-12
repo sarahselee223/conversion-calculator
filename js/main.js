@@ -15,7 +15,8 @@ function openTab(evt, type) {
     evt.currentTarget.className += " active";
 }
 
-function createTable(history){
+function createTable() {
+    const history = JSON.parse(localStorage.getItem('history') || "[]")
     const rows = document.querySelector('tbody');    
     rows.innerHTML = ''
 
@@ -29,7 +30,7 @@ function createTable(history){
         cell1.innerHTML = row.type;
         cell2.innerHTML = inputCombined;
         cell3.innerHTML = outputCombined;
-        }
+    }
 }   
 
 function clearRecord(){ 

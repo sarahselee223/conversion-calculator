@@ -14,48 +14,24 @@ function tempConvert(){
     const b = document.getElementById('options2').value
     const output = document.getElementById('output')
     const type = "Temperature";
-    // localStorage.setItem('inputItem', JSON.stringify({ 1: a, 2: num })); 
     const history = JSON.parse(localStorage.getItem('history') || "[]") 
-    // history.push()
-    
 
     if (a === b) {
         output.value = num
-       
-        history.push({
-            outputType : b,
-            outputValue : num,
-            inputType : a,
-            inputValue : num,
-            type
-        })
-        localStorage.setItem('history', JSON.stringify(history)); 
-
-        createTable(history)
-        // const outputItem = JSON.parse(localStorage.getItem('outputItem'))
-        
-        // createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
-    } 
-    else {
+    } else {
         output.value = tempTable[a][b](num).toFixed(1)
-        
-        history.push({
-            outputType : b,
-            outputValue : output.value,
-            inputType : a,
-            inputValue : num,
-            type
-        })
-        localStorage.setItem('history', JSON.stringify(history)); 
-        
-        createTable(history)
-        //localStorage.setItem('outputItem', JSON.stringify({ 1: b, 2: output.value })); 
-        // const outputItem = JSON.parse(localStorage.getItem('outputItem'))
- 
-        // createTable(outputItem[1], outputItem[2], inputItem[1], inputItem[2], type)
-    } 
+    }  
+
+    history.push({
+        outputType : b,
+        outputValue : output.value,
+        inputType : a,
+        inputValue : num,
+        type
+    })
+    localStorage.setItem('history', JSON.stringify(history)); 
     
-    return output
+    createTable()
 } 
 
 

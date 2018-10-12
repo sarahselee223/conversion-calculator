@@ -1,6 +1,6 @@
 # Unit Converter
 
-Unit Converter is a simple tool with 13 categories of essential units that are used in daily life n the world. 
+Unit Converter is a simple tool with 13 categories of essential units that are used in daily life in the world. 
 
 ### Units 
 
