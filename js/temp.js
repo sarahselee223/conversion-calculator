@@ -10,12 +10,17 @@ const tempTable = {'Celsius': {'Fahrenheit': function(num){return num * 9 / 5 + 
 
 function tempConvert(){
     const num = Number(document.getElementById('input').value)
+    const inputRaw = document.getElementById('input').value
     const a = document.getElementById('options1').value
     const b = document.getElementById('options2').value
     const output = document.getElementById('output')
     const type = "Temperature";
     const history = JSON.parse(localStorage.getItem('history') || "[]") 
 
+    if (inputRaw === ""){
+        alert("You must put input")
+        return false;
+    }
     if (a === b) {
         output.value = num
     } 

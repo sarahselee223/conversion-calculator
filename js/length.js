@@ -40,12 +40,17 @@ const lengthTable = {
 
 function lengthConvert(){
     const num = Number(document.getElementById('lInput').value)
+    const inputRaw = document.getElementById('lInput').value
     const a = document.getElementById('lOptions1').value
     const b = document.getElementById('lOptions2').value
     const output = document.getElementById('lOutput')
     const type = "Length";
     const history = JSON.parse(localStorage.getItem('history') || "[]") 
 
+    if (inputRaw == ""){
+        alert("You must put input")
+        return false;
+    }
     if (a === b) {
         output.value = num
     } else {
