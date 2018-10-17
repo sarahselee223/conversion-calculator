@@ -19,7 +19,7 @@ function tempConvert(){
     if (a === b) {
         output.value = num
     } 
-else {
+    else {
         output.value = tempTable[a][b](num).toFixed(1)
     }  
 
