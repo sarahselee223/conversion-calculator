@@ -12,7 +12,7 @@ Unit Converter is a simple tool converts between 13 essential units that are use
 
 ### Instructions
 
-To use this app, you can either go to busy-game.surge.sh or you can run it by double-clicking index.html file. 
+To use this app, you can either go to [busy-game.surge.sh](busy-game.surge.sh) or you can run it by double-clicking index.html file. 
 You can get the source code by forking and cloning this repository. 
 
 ### Tips 
